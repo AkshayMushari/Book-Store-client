@@ -27,7 +27,7 @@ const LogIn = () => {
                 alert("Please fill all the fields");
             }
             else{
-                const response = await axios.post("http://localhost:1000/api/v1/sign-in",Values);
+                const response = await axios.post("https://book-store-server-tq2z.onrender.com/api/v1/sign-in",Values);
                 dispatch(authActions.login());
                 dispatch(authActions.changeRole(response.data.role));
 
